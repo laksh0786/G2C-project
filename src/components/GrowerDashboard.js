@@ -97,7 +97,7 @@ const GrowerDashboard = () => {
                         <div className='pt-1 text-center'>
 
                             {/* Button */}
-                            <NavLink to="">
+                            <NavLink to="/forget-password">
                                 <button className=' bg-gray-700 rounded-[8px] font-medium text-gray-100 hover:bg-pink-500 duration-300 px-[8px] py-[5px] mt-4'>Click</button>
                             </NavLink>
 
