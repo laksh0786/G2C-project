@@ -99,7 +99,7 @@ export default function Profile() {
     }
 
     const response = await authController();
-    console.log(response);
+    // console.log(response);
     setProfile({ ...profileData, ["email"]: response.data.payload.email });
   }
 
@@ -109,7 +109,7 @@ export default function Profile() {
 
 
   return (
-    <div onLoad={dofetch}>
+    <div>
       <div className="w-[1100px] h-full mx-auto rounded-[6%]  flex items-center justify-center px-5 py-5">
         <form className="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden">
           <div className="flex w-full h-full">
@@ -212,7 +212,7 @@ export default function Profile() {
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 h-9 sm:text-sm sm:leading-6"
                     placeholder="Example@gmail.com"
                     onChange={doupdate}
-                    // onBlur={dofetch}
+                    onBlur={dofetch}
                     value={profileData.email}
                     readOnly
                   />

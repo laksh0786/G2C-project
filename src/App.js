@@ -22,7 +22,7 @@ function App() {
 
   const [loggedIn, setLoggedIn] = useState(false);
   const [products, setProducts] = useState([]);
-  // const [userType , setUserType] = useState("");
+  const [userType , setUserType] = useState("");
 
   async function fetchProducts(){
    
@@ -41,10 +41,10 @@ function App() {
 
     const response = await authController();
     console.log(response);
-    // setUserType(response.data.payload.type);
+    
+    setUserType(response?.data?.payload?.type);
     if(response?.data?.payload?.type){
       setLoggedIn(true);
-      navigate('/dashboard');
     }
 }
 
